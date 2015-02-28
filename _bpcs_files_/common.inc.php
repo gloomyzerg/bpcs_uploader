@@ -1,5 +1,6 @@
 <?php
 	function echon($str,$debug=false){
+		file_put_contents("/var/log/bpcs/bpcs.log", date("Y-m-d H:i:s",time())."\t\t".$str."\r\n", FILE_APPEND);
 		if($debug){
 			//slient when the message is debug output
 			//echo $str."\n";
